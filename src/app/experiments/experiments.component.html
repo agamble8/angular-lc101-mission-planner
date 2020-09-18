@@ -1,7 +1,14 @@
 <div class="displayBox">
     <h3>Possible Experiments</h3>
     <ul>
-      <li *ngFor="let experiment of experiments">{{experiment}}</li>
+      <li *ngFor="let experiment of experiments" (click) = "addExperiment(experiment)">{{experiment}}</li>
     </ul>
 </div>
+<div class="displayBox">
+  <h3>Mission Goals</h3>
+  <ol>
+      <li *ngFor = "let goal of missionGoals" (click) = "removeExperiment(goal)">{{goal}}</li>
+  </ol>
+</div>
+
 <hr>
